@@ -19,7 +19,7 @@ const HomeScreen = () => {
       />
 
       <Wrapper>
-        <LOLImage source={require('../../assets/lol.png')} />
+        <LOLImage source={require('../../assets/ucoGG.png')} />
         <TitleText>¡Bienvenido a ucoGG!</TitleText>
         {/* <Searchbar
           value="Kan0#EUW"

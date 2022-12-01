@@ -16,8 +16,8 @@ export const BackgroundVideo = styled(Video)`
 `;
 
 export const LOLImage = styled(Image)`
-  width: 100px;
-  height: 100px;
+  width: 35%;
+  height: 30%;
 `;
 
 export const TitleText = styled(Text)`
@@ -37,5 +37,5 @@ export const Wrapper = styled(View)`
 `;
 
 export const SearchBarStyle = styled(SearchBar)`
-  margin-top: 10px;
+  margin-top: 3%;
 `;
