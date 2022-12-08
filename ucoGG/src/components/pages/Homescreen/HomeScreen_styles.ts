@@ -15,9 +15,15 @@ export const BackgroundVideo = styled(Video)`
   right: 0;
 `;
 
+export const ImageWrapper = styled(View)`
+  width: 148px;
+  height: 200px;
+`
+
 export const LOLImage = styled(Image)`
-  width: 35%;
-  height: 30%;
+width: 100%;
+height: 100%;
+object-fit: contain;
 `;
 
 export const TitleText = styled(Text)`

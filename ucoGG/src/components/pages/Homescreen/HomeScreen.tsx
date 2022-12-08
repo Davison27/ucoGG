@@ -1,32 +1,40 @@
 import React from 'react';
 import {
   BackgroundVideo,
+  ImageWrapper,
   LOLImage,
   MainView,
   SearchBarStyle,
   TitleText,
   Wrapper,
 } from './HomeScreen_styles';
+import {useHomeScreen} from './hooks';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
+  const {handleChange, handleSearchPress} = useHomeScreen(navigation);
   return (
     <MainView>
       <BackgroundVideo
-        source={require('../../assets/lol.mp4')}
+        source={require('../../../assets/lol.mp4')}
         repeat={true}
         muted={true}
         resizeMode={'cover'}
       />
 
       <Wrapper>
-        <LOLImage source={require('../../assets/ucoGG.png')} />
+        <ImageWrapper>
+          <LOLImage source={require('../../../assets/ucoGG.png')} />
+        </ImageWrapper>
         <TitleText>¡Bienvenido a ucoGG!</TitleText>
         {/* <Searchbar
           value="Kan0#EUW"
           icon={require('../../assets/search.png')}></Searchbar> */}
         <SearchBarStyle
-          placeholder="Search here"
-          onChangeText={text => console.log(text)}
+          placeholder="Nombre de campeón"
+          onChangeText={handleChange}
+          onSearchPress={handleSearchPress}
+
+          // onSubmitEditing={handleSubmit}
         />
       </Wrapper>
     </MainView>
