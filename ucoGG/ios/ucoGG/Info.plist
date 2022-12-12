@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -51,5 +51,19 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BeaufortforLOL-Bold.ttf</string>
+		<string>BeaufortforLOL-BoldItalic(1).ttf</string>
+		<string>BeaufortforLOL-BoldItalic.ttf</string>
+		<string>BeaufortforLOL-Heavy.ttf</string>
+		<string>BeaufortforLOL-HeavyItalic.ttf</string>
+		<string>BeaufortforLOL-Italic.ttf</string>
+		<string>BeaufortforLOL-Light.ttf</string>
+		<string>BeaufortforLOL-LightItalic.ttf</string>
+		<string>BeaufortforLOL-Medium.ttf</string>
+		<string>BeaufortforLOL-MediumItalic.ttf</string>
+		<string>BeaufortforLOL-Regular.ttf</string>
+	</array>
 </dict>
 </plist>
