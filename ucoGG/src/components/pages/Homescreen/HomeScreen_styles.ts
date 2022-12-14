@@ -21,13 +21,14 @@ export const ImageWrapper = styled(View)`
 `
 
 export const LOLImage = styled(Image)`
-width: 100%;
-height: 100%;
-object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 `;
 
 export const TitleText = styled(Text)`
   color: white;
+  font-family: "BeaufortforLOL-Heavy";
   font-weight: bold;
   font-size: 30px;
   margin-top: 5px;

@@ -10,12 +10,8 @@ export const useHomeScreen = (navigation)=>{
     }
 
     const handleSearchPress = ()=>{
-        if(championName){
-            const formatedChampionName = championName.charAt(0).toUpperCase() + championName.slice(1).toLowerCase()
-            console.log(formatedChampionName);
             
-            navigation.navigate('Champion', {championName: formatedChampionName})
-        }
+            navigation.navigate('Champion', {championName})
         //Peticion a la api de ddragon
 
     }

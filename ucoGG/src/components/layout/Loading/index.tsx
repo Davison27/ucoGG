@@ -1,7 +1,14 @@
-import {Image, Text, View} from 'react-native';
+import {LoadingVideo} from './styles';
 
 const Loading = () => {
-  return <Text>Loading...</Text>;
+  return (
+    <LoadingVideo
+      source={require('../../../assets/poroLoading.mp4')}
+      repeat={true}
+      muted={true}
+      resizeMode={'cover'}
+    />
+  );
 };
 
 export default Loading;
