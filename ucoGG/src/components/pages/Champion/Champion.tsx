@@ -7,7 +7,21 @@ import {
   Filter,
   Lore,
   Name,
+  Passive,
+  PassiveDescription,
+  PassiveInfo,
+  PassiveImage,
+  PassiveName,
+  PassiveSection,
+  PassiveTitle,
+  Skin,
+  SkinImage,
+  SkinName,
+  SkinsSection,
+  SkinsTitle,
   Spell,
+  SpellCost,
+  SpellCooldown,
   SpellDescription,
   SpellInfo,
   SpellImage,
@@ -20,9 +34,13 @@ import {
   TitleSection,
   Wrapper,
 } from './Champion_styles';
-import {SpellProps} from './types';
+import {SpellProps, SkinsProps} from './types';
 
 const Champion = ({route}) => {
+  const passiveImageUrl =
+    'http://ddragon.leagueoflegends.com/cdn/12.23.1/img/passive';
+  const skinImageUrl =
+    'http://ddragon.leagueoflegends.com/cdn/img/champion/loading';
   const spellImageUrl =
     'https://ddragon.leagueoflegends.com/cdn/12.23.1/img/spell';
   const {championName} = route.params;
@@ -31,6 +49,8 @@ const Champion = ({route}) => {
   const [lore, setLore] = useState();
   const [name, setName] = useState();
 
+  const [passiveSpell, setPassiveSpell] = useState();
+  const [skins, setSkins] = useState<SkinsProps[]>();
   const [spells, setSpells] = useState<SpellProps[]>();
   const [tags, setTags] = useState<string[]>();
   const [title, setTitle] = useState();
@@ -47,12 +67,24 @@ const Champion = ({route}) => {
 
       setLore(championResult.data[championName].lore);
       setName(championResult.data[championName].name.toUpperCase());
+      setPassiveSpell(championResult.data[championName].passive);
+      setSkins(
+        championResult.data[championName].skins.map(skin => {
+          return {
+            num: skin.num,
+            name: skin.name,
+            chromas: skin.chromas,
+          };
+        }),
+      );
       setSpells(
         championResult.data[championName].spells.map(spell => {
           return {
             description: spell.description,
             id: spell.id,
             name: spell.name,
+            cooldown: spell.cooldown.join('/'),
+            cost: spell.cost.join('/'),
           };
         }),
       );
@@ -67,8 +99,6 @@ const Champion = ({route}) => {
       setIsLoading(false);
     })();
   }, []);
-
-  console.log(spells);
 
   return (
     <>
@@ -88,7 +118,22 @@ const Champion = ({route}) => {
                   <Tag key={tag}>{tag}</Tag>
                 ))}
               </TagsSection>
-              <SpellsTitle>Habilidades</SpellsTitle>
+              <PassiveTitle>Passive</PassiveTitle>
+              <PassiveSection>
+                <Passive>
+                  <PassiveImage
+                    source={{
+                      uri: `${passiveImageUrl}/${passiveSpell.image.full}`,
+                    }}></PassiveImage>
+                  <PassiveInfo>
+                    <PassiveName>{passiveSpell.name}</PassiveName>
+                    <PassiveDescription>
+                      {passiveSpell.description}
+                    </PassiveDescription>
+                  </PassiveInfo>
+                </Passive>
+              </PassiveSection>
+              <SpellsTitle>Abilities</SpellsTitle>
               <SpellsSection>
                 {spells?.map(spell => (
                   <Spell key={spell.id}>
@@ -99,10 +144,26 @@ const Champion = ({route}) => {
                     <SpellInfo>
                       <SpellName>{spell.name}</SpellName>
                       <SpellDescription>{spell.description}</SpellDescription>
+                      <SpellCooldown>
+                        Cooldown: {spell.cooldown} seconds
+                      </SpellCooldown>
+                      <SpellCost>Cost: {spell.cost} mana</SpellCost>
                     </SpellInfo>
                   </Spell>
                 ))}
               </SpellsSection>
+              <SkinsTitle>Skins</SkinsTitle>
+              <SkinsSection>
+                {skins?.map(skin => (
+                  <Skin key={skin.num}>
+                    <SkinImage
+                      source={{
+                        uri: `${skinImageUrl}/${championName}_${skin.num}.jpg`,
+                      }}></SkinImage>
+                    <SkinName>{skin.name}</SkinName>
+                  </Skin>
+                ))}
+              </SkinsSection>
             </Wrapper>
           </ScrollView>
         </>

@@ -35,11 +35,94 @@ export const Name = styled(Text)`
     font-size: 50px;
 `
 
+export const Passive = styled(View)`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+`
+
+export const PassiveDescription = styled(Text)`
+    color: white;
+    font-family: "BeaufortforLOL-Medium";
+`
+    
+export const PassiveInfo = styled(View)`
+    margin-left: 20px;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex: 1;
+`
+
+export const PassiveImage = styled(Image)`
+    width: 50px;
+    height: 50px;
+`
+
+export const PassiveName = styled(Text)`
+    color: white;
+    font-family: "BeaufortforLOL-Medium";
+    font-weight: 900;
+`
+
+export const PassiveSection = styled(View)`
+    display: flex;
+`
+
+export const PassiveTitle = styled(Text)`
+    margin: 30px auto 10px;
+    color: white;
+    font-family: "BeaufortforLOL-Medium";
+    font-weight: 900;
+    font-size: 25px;
+`
+
+export const Skin = styled(View)`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+`
+
+export const SkinName = styled(Text)`
+    color: white;
+    font-family: "BeaufortforLOL-Medium";
+    font-weight: 900;
+    margin-top: 5px;
+`
+
+export const SkinImage = styled(Image)`
+    width: 150px;
+    height: 250px;
+`
+
+export const SkinsSection = styled(View)`
+    display: flex;
+`
+
+export const SkinsTitle = styled(Text)`
+    margin: 30px auto 10px;
+    color: white;
+    font-family: "BeaufortforLOL-Medium";
+    font-weight: 900;
+    font-size: 25px;
+`
+
 export const Spell = styled(View)`
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 20px;
+`
+
+export const SpellCost = styled(Text)`
+    color: white;
+    font-family: "BeaufortforLOL-Medium";
+`
+
+export const SpellCooldown = styled(Text)`
+    color: white;
+    font-family: "BeaufortforLOL-Medium";
 `
 
 export const SpellDescription = styled(Text)`
@@ -111,3 +194,4 @@ export const Wrapper = styled(View)`
     flex-direction: column;
     padding: 20px;
 `
+
