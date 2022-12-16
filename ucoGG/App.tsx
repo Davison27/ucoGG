@@ -17,11 +17,6 @@ function ItemStackScreen() {
         component={HomeScreen}
         options={{headerShown: false}}
       />
-      <Stack.Screen
-        name="Champion"
-        component={Champion}
-        options={{headerShown: false}}
-      />
     </Stack.Navigator>
   );
 }
@@ -44,7 +39,7 @@ function HomeStackScreen() {
 }
 
 function MapStackScreen() {
-  return <WebView source={{uri: `https://map.leagueoflegends.com/es_ES`}} />;
+  return <WebView source={{uri: `https://map.leagueoflegends.com/en_US`}} />;
 }
 
 const App = () => {
