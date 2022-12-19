@@ -2,29 +2,30 @@ import React from 'react';
 import {
   BackgroundImage,
   ImageWrapper,
-  LOLImage,
+  ORNImage,
   MainView,
   SearchBarStyle,
   TitleText,
   Wrapper,
-} from './ItemHome_styles';
-import {useItem} from './hooks';
+} from './ItemSearch_styles';
+import {useItemSearch} from './hooks';
 
-const ItemHome = ({navigation}) => {
-  const {handleChange, handleSearchPress} = useItem(navigation);
+const ItemSearch = ({navigation}) => {
+  const {handleChange, handleSearchPress} = useItemSearch(navigation);
+
   return (
     <MainView>
       <BackgroundImage source={require('../../../assets/item.jpg')} />
       <Wrapper>
         <ImageWrapper>
-          <LOLImage source={require('../../../assets/ornn.png')} />
+          <ORNImage source={require('../../../assets/ornn.png')} />
         </ImageWrapper>
-        <TitleText>Directorio Objetos</TitleText>
+        <TitleText>Items</TitleText>
         {/* <Searchbar
           value="Kan0#EUW"
           icon={require('../../assets/search.png')}></Searchbar> */}
         <SearchBarStyle
-          placeholder="Nombre del objeto"
+          placeholder="Nombre del Item"
           onChangeText={handleChange}
           onSearchPress={handleSearchPress}
 
@@ -35,4 +36,4 @@ const ItemHome = ({navigation}) => {
   );
 };
 
-export default ItemHome;
+export default ItemSearch;

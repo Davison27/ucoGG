@@ -30,7 +30,7 @@ const HomeScreen = ({navigation}) => {
           value="Kan0#EUW"
           icon={require('../../assets/search.png')}></Searchbar> */}
         <SearchBarStyle
-          placeholder="Nombre de campeón"
+          placeholder="Nombre del campeón"
           onChangeText={handleChange}
           onSearchPress={handleSearchPress}
 

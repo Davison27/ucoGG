@@ -10,10 +10,7 @@ export const useHomeScreen = (navigation)=>{
     }
 
     const handleSearchPress = ()=>{
-            
-            navigation.navigate('Champion', {championName})
-        //Peticion a la api de ddragon
-
+        navigation.navigate('Champion', {championName})
     }
 
     return {

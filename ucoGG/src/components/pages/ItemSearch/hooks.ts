@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-export const useItem = (navigation)=>{
+export const useItemSearch = (navigation)=>{
 
     const [itemName, setItemName] = useState<string>()
 
@@ -10,10 +10,7 @@ export const useItem = (navigation)=>{
     }
 
     const handleSearchPress = ()=>{
-            
-            navigation.navigate('Item', {itemName})
-        //Peticion a la api de ddragon
-
+        navigation.navigate('ItemScreen', {itemName})
     }
 
     return {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import HomeScreen from './src/components/pages/Homescreen/HomeScreen';
 import Champion from './src/components/pages/Champion/Champion';
-import ItemHome from './src/components/pages/ItemHome/ItemHome';
+import ItemSearch from './src/components/pages/ItemSearch/ItemSearch';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -16,12 +16,12 @@ function ItemStackScreen() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="ItemHome"
-        component={ItemHome}
+        name="ItemSearch"
+        component={ItemSearch}
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="Item"
+        name="ItemScreen"
         component={Item}
         options={{headerShown: false}}
       />
@@ -33,7 +33,7 @@ function HomeStackScreen() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Home"
+        name="HomeScreen"
         component={HomeScreen}
         options={{headerShown: false}}
       />

@@ -7,14 +7,13 @@ export const MainView = styled(View)`
 `;
 
 export const ImageWrapper = styled(View)`
-  width: 148px;
-  height: 200px;
+  width: 321px;
+  height: 207px;
 `
 
-export const LOLImage = styled(Image)`
-  width: 180%;
+export const ORNImage = styled(Image)`
+  width: 100%;
   height: 100%;
-  object-fit: contain;
 `;
 
 export const TitleText = styled(Text)`
