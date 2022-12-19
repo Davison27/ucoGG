@@ -10,14 +10,14 @@ import {
 } from './HomeScreen_styles';
 import {useHomeScreen} from './hooks';
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({navigation}: any) => {
   const {handleChange, handleSearchPress} = useHomeScreen(navigation);
   return (
     <MainView>
       <BackgroundVideo
         source={require('../../../assets/lol.mp4')}
         repeat={true}
-        muted={true}
+        muted={false}
         resizeMode={'cover'}
       />
 
@@ -25,12 +25,12 @@ const HomeScreen = ({navigation}) => {
         <ImageWrapper>
           <LOLImage source={require('../../../assets/ucoGG.png')} />
         </ImageWrapper>
-        <TitleText>¡Bienvenido a ucoGG!</TitleText>
+        <TitleText>¡Welcome to ucoGG!</TitleText>
         {/* <Searchbar
           value="Kan0#EUW"
           icon={require('../../assets/search.png')}></Searchbar> */}
         <SearchBarStyle
-          placeholder="Nombre del campeón"
+          placeholder="Champion name"
           onChangeText={handleChange}
           onSearchPress={handleSearchPress}
 

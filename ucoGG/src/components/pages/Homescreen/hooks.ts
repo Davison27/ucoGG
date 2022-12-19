@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-export const useHomeScreen = (navigation)=>{
+export const useHomeScreen = (navigation: any)=>{
 
     const [championName, setChampionName] = useState<string>()
 

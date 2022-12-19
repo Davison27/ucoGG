@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-export const useItemSearch = (navigation)=>{
+export const useItemSearch = (navigation: any)=>{
 
     const [itemName, setItemName] = useState<string>()
 

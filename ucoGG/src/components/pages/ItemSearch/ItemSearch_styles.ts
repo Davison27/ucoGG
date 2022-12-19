@@ -17,11 +17,11 @@ export const ORNImage = styled(Image)`
 `;
 
 export const TitleText = styled(Text)`
-  color: white;
-  font-family: "BeaufortforLOL-Heavy";
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: 5px;
+color: white;
+margin-top: 5px;
+font-family: "BeaufortforLOL-Bold";
+font-size: 35px;
+font-weight: 600;
 `;
 
 export const Wrapper = styled(View)`

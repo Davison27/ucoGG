@@ -10,7 +10,7 @@ import {
 } from './ItemSearch_styles';
 import {useItemSearch} from './hooks';
 
-const ItemSearch = ({navigation}) => {
+const ItemSearch = ({navigation}: any) => {
   const {handleChange, handleSearchPress} = useItemSearch(navigation);
 
   return (
@@ -25,7 +25,7 @@ const ItemSearch = ({navigation}) => {
           value="Kan0#EUW"
           icon={require('../../assets/search.png')}></Searchbar> */}
         <SearchBarStyle
-          placeholder="Nombre del Item"
+          placeholder="Item name"
           onChangeText={handleChange}
           onSearchPress={handleSearchPress}
 

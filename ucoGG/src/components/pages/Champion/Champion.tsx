@@ -58,8 +58,6 @@ const Champion = ({route}) => {
 
   useEffect(() => {
     (async () => {
-      // Hacer también un botón para el idioma que debe de ser sencillo, para ello deberemos de implementar un apartado de ajustes dentro de la app
-
       const championResponse = await fetch(
         `http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion/${championName}.json`,
       );
